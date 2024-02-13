@@ -36,14 +36,53 @@ Let's connect and collaborate:
 
 Feel free to reach out for discussions, collaborations, or just to say hi! 🚀
 
+<!-- Complex UI and Animation -->
+<div class="profile-container">
+  <div class="animated-border"></div>
+  <div class="profile-info animated-text">Enthusiastic CSE Undergrad @ Amity University Mumbai</div>
+</div>
+
 <style>
   /* CSS Animation */
-  .animated-text {
-    animation: fadeIn ease 4s;
+  @keyframes borderAnimation {
+    0% { width: 0; }
+    100% { width: 100%; }
   }
 
   @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
+  }
+
+  /* Profile Container */
+  .profile-container {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+
+  /* Animated Border */
+  .animated-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #007bff; /* Change color as needed */
+    animation: borderAnimation ease 2s forwards;
+  }
+
+  /* Profile Info */
+  .profile-info {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    line-height: 100px;
+    font-size: 24px;
+    color: #333; /* Change color as needed */
+    opacity: 0;
+    animation: fadeIn ease 2s forwards;
   }
 </style>
